@@ -1,5 +1,28 @@
-
+const vectorPreguntas: string[] = [
+    "1. Diseñar un programa TS que permita calcular la suma de los primeros N términos de la siguiente serie: 1 - 1/3 + 1/5 - 1/7 + 1/9 - …",
+    "2. Diseñar un programa TS que permita calcular la suma de los primeros N términos de la siguiente serie: 64/21 + 62/24 + 60/27 + 58/30 + …",
+    "3. Construir un programa TS que permita ingresar N números enteros a un vector, luego determine el primer número par de las posiciones pares.",
+    "4. Guardar 5 números en un vector tal como A y 9 números en otro vector tal como B, luego trasladar el último número de A al final de B.",
+    "5. Guardar en un vector N números enteros, luego cambiar el contenido del número menor por el acumulado de la suma de todos los números que se ubican delante de él.",
+    "6. Ingresar en un vector N números, luego intercambie el contenido del último número par por el primer número impar.",
+    "7. Construir un programa TS que permita almacenar en 3 vectores diferentes los nombres de N productos, sus cantidades y precios respectivamente, almacenar en un nuevo vector el total (en dinero) de todos los productos, y mostrar el nombre del producto que tiene el menor total.",
+    "8. Ingresar n números enteros a un vector luego ingresar un número cualquiera, se pide pasar a un nuevo vector todos los números menores e iguales al número ingreso, en caso no exista ningún numero mostrar un mensaje correspondiente.",
+    "9. Construir un programa TS que permita ingresar a un vector N notas de alumnos, calcule el promedio y muestre en dos vectores distintos las notas mayores y menores al promedio.",
+    "10. En un campeonato de voley se almacena en un vector los nombres de los 5 países participantes y en otro vector los puntajes obtenidos, (ambos datos ingresados como argumentos), se pide mostrar el nombre del país que obtuvo el mayor y menor puntaje.",
+    "11. Ingresar N números a un vector luego reemplazar el mayor número por la suma del primer número par y el último número impar del mismo arreglo.",
+    "12. Se da una prueba con 10 preguntas con respuestas de verdadero y falso. Los resultados se guarda en un vector, el cero representa falso y el uno verdadero. En otro vector se inicializan las claves de las respuestas, calcular su calificación sabiendo que por cada respuesta correcta obtiene 2 puntos y por cada incorrecta -0.3.",
+    "13. Guardar en un vector los nombres de estudiantes, y en otro vector sus promedios finales (0-20), calcular el mayor y menor promedio y mostrar los nombres de los estudiantes que obtuvieron dichos promedios.",
+    "14. Construir un programa TS que permita almacenar en un vector N números enteros, luego calcular el promedio y mostrar en un nuevo vector todos los números pares mayores al promedio.",
+    "15. Ingresar a un vector de tamaño N números enteros, e intercambiar el primer número múltiplo de 3 por el último número par. En caso no exista ningún número múltiplo de 3 mostrar un mensaje respectivo.",
+    "16. Guardar en un vector N números enteros, luego lea un número y reemplazarlo por el número más cercano del arreglo, en caso exista más de uno hacer solo un reemplazo.",
+    "17. Construir un programa TS donde se pueda ingresar 10 sueldos en un arreglo unidimensional, luego seleccione los sueldos mayores a 475 y muéstrelo en otro arreglo."
+  ];
+  
 function ejercicio_1() {
+    /*
+    1.	Diseñar un programa TS que permita calcular la suma de los primeros N términos de la siguiente serie: 
+        1	-	1/3	+	1/5	-	1/7	+	1/9	-	…
+        */
 
     let data: string | null = prompt('Por favor, introduce un valor:');//Recibir un dato, y almacenarlo ("Ojo: Usarlo directamente en number, genera un error.")
     let n:number = Number(data);//Transformar el valor a un numero
@@ -28,6 +51,10 @@ function ejercicio_1() {
 
 function ejercicio_2() {
 
+    /*
+    2.	Diseñar un programa TS que permita calcular la suma de los primeros N términos de la siguiente serie: 
+    64/21		+	62/24		+	60/27		+	58/30		+	…
+    */
     let data: string | null = prompt('Por favor, introduce un valor:');//Recibir un dato, y almacenarlo ("Ojo: Usarlo directamente en number, genera un error.")
     let n:number = Number(data);//Transformar el valor a un numero
     let suma:number = 0;//Variable para almacenar la suma de los numeros
@@ -54,6 +81,9 @@ function ejercicio_2() {
 }
 
 function ejercicio_3() {
+    /*
+    3.	Construir un programa TS que permita ingresar N números enteros a un vector, luego determine el primer número par de las posiciones pares.
+    */
     let data: string | null = prompt('Por favor, ingrese el tamaño del arreglo:');
     let n:number = Number(data);
     const miVector: number[] = [];
@@ -80,6 +110,9 @@ function ejercicio_3() {
 }
 
 function ejercicio_4(){
+    /*
+    4.	Guardar 5 números en un vector tal como A y 9 números en otro vector tal como B, luego trasladar el último número de A al final de B.
+    */
     let vectorA: number[] = [7,7,9,10,5];
     let vectorB: number[] = [5,8,6,5,10,8,11,18,18];
     console.log("Inicio:");
@@ -95,6 +128,9 @@ function ejercicio_4(){
 }
 
 function ejercicio_5(){
+    /*
+    5.	Guardar en un vector N números enteros, luego cambiar el contenido del número menor por el acumulado de la suma de todos los números que se ubican delante de él.
+    */
    let data: string | null = prompt('Por favor, ingrese el tamaño del arreglo:');
     let n:number = Number(data);
     const miVector: number[] = [];
@@ -122,24 +158,25 @@ function ejercicio_5(){
 }
 
 function ejercicio_6(){
-    
+    /*
+    6.	Ingresar en un vector N números, luego intercambie el contenido del último número par por el primer número impar.
+    */
     let pos_par:number = 0;
     let pos_impar:number = 0;
-    let vectorB: number[] = [2,7,6,5,10,8,5,13,18];
-
+    let vector: number[] = [2,7,6,5,10,8,5,13,18];
 
     let encontrado:boolean = false;
 
-    console.log("El vector es: "+ vectorB);
+    console.log("El vector es: "+ vector);
 
     for(let i=1;i<10;i++){
-        if(i%2!=0 && encontrado==false){
+        if(vector[i-1]%2!=0 && encontrado==false){
             pos_impar=i-1;
             encontrado=true;
             console.log("El primer número impar tiene la posicion: "+ pos_impar);
         }
 
-        if(i%2==0){
+        if(vector[i-1]%2==0){
             pos_par=i-1;
             console.log( i+" ->"+pos_par);
         }
@@ -147,14 +184,26 @@ function ejercicio_6(){
 
 
     console.log("Reporte:");
-    console.log("El primer número impar es: "+ vectorB[pos_impar]+ " y su posición es: "+ pos_impar);
-    console.log("El ultimo número par es: "+ vectorB[pos_par] + " y su posición es: "+ pos_par);
+    console.log("El primer número impar es: "+ vector[pos_impar]+ " y su posición es: "+ pos_impar);
+    console.log("El ultimo número par es: "+ vector[pos_par] + " y su posición es: "+ pos_par);
+     //Intercambiar los valores de pos_impar con pos_par
+    //Primera for con destructuring assignment (https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+    [vector[pos_impar], vector[pos_par]] = [vector[pos_par], vector[pos_impar]];
+    //Segunda for con una variable auxiliar
+    /*let aux:number = vector[pos_impar];
+    vector[pos_impar]=vector[pos_par];
+    vector[pos_par]=aux;*/
+
+    console.log("El vector es: "+ vector);
     
-    vectorB[pos_impar] = vectorB[pos_par];
-    console.log("El vector es: "+ vectorB);
 }
 
 function ejercicio_7(){
+    /*
+    7.Construir un programa TS que permita almacenar en 3 vectores diferentes los nombres de N productos, sus cantidades y precios respectivamente, 
+    almacenar en un nuevo vector el total (en dinero) de todos los productos, y mostrar el nombre del producto que tiene el menor total.
+    */
+
     let data: string | null = prompt('Por favor, ingrese el tamaño del arreglo de los 3 arreglos:');
     let tam:number = Number(data);
     //Vectores
@@ -188,6 +237,11 @@ function ejercicio_7(){
 }
 
 function ejercicio_8(){
+    /*
+    8.	Ingresar n números enteros a un vector luego ingresar un número cualquiera, se pide pasar a un nuevo vector todos los
+     números menores e guales al número ingreso, en caso no exista ningún numero mostrar un mensaje correspondiente.
+    */
+    
     let data: string | null = prompt('Por favor, ingrese el tamaño del arreglo:');
     let n:number = Number(data);
     const miVector: number[] = [];
@@ -221,6 +275,11 @@ function ejercicio_8(){
 }
 
 function ejercicio_9(){
+    /*
+    9.	Construir un programa TS que permita ingresar a un vector N notas de alumnos, calcule el promedio y muestre en dos vectores distintos las notas 
+    mayores y menores al promedio.
+    */
+
     let data: string | null = prompt('Por favor, ingrese el tamaño del arreglo:');
     let n:number = Number(data);
     const miVector: number[] = [];
@@ -254,6 +313,10 @@ function ejercicio_9(){
 }
 
 function ejercicio_10(){
+    /*
+    10.	En un campeonato de voley se almacena en un vector los nombre de los 5 países participantes y en otro 
+    vector los puntajes obtenidos, (ambos datos ingresados como argumentos), se pide mostrar el nombre del país que obtuvo el mayor y menor puntaje.
+    */
     let data: string | null = prompt('Por favor, ingrese el tamaño del arreglo:');
     let n:number = Number(data);
     const vectorPais: string[] = [];
@@ -285,6 +348,128 @@ function ejercicio_10(){
 }
 
 function ejercicio_11(){
+    /*
+        11.	Ingresar N números a un vector luego reemplazar el mayor número por la suma del primer número par y el último número impar del mismo arreglo.
+    */
+    let data: string | null = prompt('Por favor, ingrese el tamaño del arreglo:');
+    let n:number = Number(data);
+    const vector: number[] = [];
+    let pos_par:number = 0;
+    let pos_impar:number = 0;
+
+    for( let i = 0; i < n; i++) {
+        data = prompt('Ingrese el numero '+ (i+1));
+        vector.push(Number(data));
+    }
+
+    console.log(vector);
+
+    let encontrado:boolean = false;
+
+    console.log("El vector es: "+ vector);
+
+    for(let i=1;i<=n;i++){
+        if(vector[i-1]%2==0 && encontrado==false){
+            pos_par=i-1;
+            encontrado=true;
+            console.log("El primer número par tiene la posicion: "+ pos_par + " y su valor es: "+ vector[pos_par]);
+        }
+
+        if(vector[i-1]%2!=0){
+            pos_impar=i-1;
+            console.log( i+" ->"+pos_impar);
+        }
+    }
+    console.log("El ultimo número impar tiene la posicion: "+ pos_impar + " y su valor es: "+ vector[pos_impar]);
+    let suma:number = vector[pos_par]+vector[pos_impar];
+    console.log("La suma es: "+suma);
+
+    let pos_mayor:number = 0;
+    pos_mayor = vector.indexOf(Math.max(...vector));//Encontrar la posicion del número más grande en el vector
+
+    /* El "..." que hace?:
+    El operador de propagación (…) se utiliza para expandir una expresión en los lugares donde se esperan 
+    múltiples argumentos (llamadas a funciones) o múltiples elementos (arrays literales).
+
+    Y por que si no lo pongo no funciona?:
+    - El método Math.max() devuelve el mayor de cero o más números. Si se pasa algún parámetro, este es convertido a número;
+        de lo contrario se devuelve -Infinity.
+
+    - Además, el método Math.max() no acepta un array como parámetro, pero el operador de propagación (...) nos permite pasar un array como parámetro.
+    https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+    */
+
+    console.log("El mayor es: "+ vector[pos_mayor] + " y su posicion es: "+ pos_mayor);
+
+    vector[pos_mayor]=suma;
+    console.log("El vector final es: "+ vector);
+}
+
+function ejercicio_12(){
+    /*
+    12.	Se da una prueba con 10 preguntas con respuestas de verdadero y falso. Los resultados se guarda en un vector, el cero representa falso y 
+    el uno verdadero. En otro vector se inicializan las claves de las respuestas, calcular su calificación sabiendo que por cada respuesta correcta obtiene
+     2 puntos y por cada incorrecta -0.3.
+    */
+
+    let vectorRespuestas: number[] = [1,0,1,1,0,1,0,1,1,0];
+
+    let data: string | null;
+
+    alert("Vas a responder 10 preguntas, por favor, trata de adivinar, solo ingresa 1 o 0. Y comparte tu score al finalizar el examen:"); 
+
+    
+    let vectorClaves: number[] = [];
+    for( let i = 0; i < 10; i++) {
+        data = prompt('Ingrese la clave de la pregunta '+ (i+1));
+        vectorClaves.push(Number(data));
+    }
+
+    let calificacion:number = 0;
+
+    for(let i=0;i<10;i++){
+        if(vectorRespuestas[i]==vectorClaves[i]){
+            calificacion+=2;
+        }
+        else{
+            calificacion-=0.3;
+        }
+    }
+
+    if(calificacion==20){
+        alert("Felicidades, eres todo un adivino");
+    }
+    else if(calificacion< 0){
+        calificacion=0;
+    }
+
+    console.log("La calificacion es: "+ calificacion);
+}
+
+function ejercicio_13(){
+    /*
+    13.	Guardar en un vector los nombres de estudiantes, y en otro vector sus promedios finales (0-20), calcular el mayor y menor 
+    promedio y mostrar los nombres de los estudiantes que obtuvieron dichos promedios.
+    */
+    let vectorEstudiantes: string[] = ["Juan","Pedro","Maria","Jose","Luis","Ana","Carlos","Jorge","Luisa","Miguel"];
+    let vectorPromedios: number[] = [15,12,18,20,10,13,14,16,17,19];
+
+    console.log(vectorEstudiantes);
+    console.log(vectorPromedios);
+
+    let pos_mayor:number = vectorPromedios.indexOf(Math.max(...vectorPromedios));//Encontrar la posicion del número más grande en el vector
+    let pos_menor:number = vectorPromedios.indexOf(Math.min(...vectorPromedios));//Encontrar la posicion del número más pequeño en el vector
+
+    console.log("El estudiante con mayor promedio es: "+ vectorEstudiantes[pos_mayor] + " con un promedio de: "+ vectorPromedios[pos_mayor]);
+    console.log("El estudiante con menor promedio es: "+ vectorEstudiantes[pos_menor] + " con un promedio de: "+ vectorPromedios[pos_menor]);
+
+}
+
+function ejercicio_14(){
+    /*
+    14.	Construir un programa TS que permita almacenar en un vector N números enteros, luego calcular el promedio y mostrar en un nuevo vector 
+    todos los números pares mayores al promedio.
+    */
     let data: string | null = prompt('Por favor, ingrese el tamaño del arreglo:');
     let n:number = Number(data);
     const vector: number[] = [];
@@ -293,8 +478,249 @@ function ejercicio_11(){
         vector.push(Number(data));
     }
 
+    console.log(vector);
+
+    let promedio:number = Math.round(vector.reduce((a, b) => a + b) / vector.length);
+    const vectorPares: number[] = [];
+
+    for(let i=0;i<n;i++){
+        if(vector[i]>promedio && vector[i]%2==0){
+            vectorPares.push(vector[i]);
+        }
+    }
+
+    console.log("El promedio es: "+ promedio);
+    console.log("Los números pares mayores al promedio son: "+ vectorPares);
 }
 
-ejercicio_10();
+function ejercicio_15(){
 
-let opcion: number = 0;
+    /*15.	Ingresar a un vector de tamaño N números enteros, e intercambiar
+     el primer número múltiplo de 3 por el último número par. En caso no exista ningún número múltiplo de 3 mostrar un mensaje respectivo
+    */
+
+    let data: string | null = prompt('Por favor, ingrese el tamaño del arreglo:');
+    let n:number = Number(data);
+    const vector: number[] = [];
+    for( let i = 0; i < n; i++) {
+        data = prompt('Ingrese el numero '+ (i+1));
+        vector.push(Number(data));
+    }
+
+    console.log(vector);
+
+    let pos_par:number = 0;
+    let pos_multiploThree:number = 0;
+    
+    let find_mulThree:boolean = false;
+    let find_Par:boolean = false;
+
+    for(let i=1;i<=n;i++){
+        //e intercambiar el primer número múltiplo de 3 por el último número par
+        if(vector[i-1]%3==0 && find_mulThree==false){
+            pos_multiploThree=i-1;
+            find_mulThree=true;
+            console.log("El primer número multiplo de 3 tiene la posicion: "+ pos_multiploThree + " y su valor es: "+ vector[pos_multiploThree]);
+        }
+
+        if(vector[i-1]%2==0){
+            pos_par=i-1;
+            find_Par=true;
+            console.log( i+" ->"+pos_par);
+        }
+    }
+
+    if(find_mulThree && find_Par){
+        console.log("El primer número multiplo de 3 es: "+ vector[pos_multiploThree] + " y su posicion es: "+ pos_multiploThree);
+        console.log("El último número par es: "+ vector[pos_par] + " y su posicion es: "+ pos_par);
+
+        [vector[pos_par], vector[pos_multiploThree]] = [vector[pos_multiploThree], vector[pos_par]];
+ 
+        console.log("El vector final es: "+ vector);
+    }
+    else{
+        if(!find_Par){
+            console.log("No hay números pares");
+        }
+        else{
+            console.log("El último número par es: "+ vector[pos_par] + " y su posicion es: "+ pos_par);
+        }
+    
+        if(!find_mulThree){
+            console.log("No hay números multiplos de 3");
+        }
+        else{
+            console.log("El primer número multiplo de 3 es: "+ vector[pos_multiploThree] + " y su posicion es: "+ pos_multiploThree);
+        }
+    }
+}
+
+function ejercicio_16(){
+    /*
+    16.	Guardar en un vector N números enteros, luego lea un número y reemplazarlo por el número más cercano del arreglo, en caso exista más de uno hacer solo un reemplazo.
+    */
+    let data: string | null = prompt('Por favor, ingrese el tamaño del arreglo:');
+    let n:number = Number(data);
+    const vector: number[] = [];
+    for( let i = 0; i < n; i++) {
+        data = prompt('Ingrese el numero '+ (i+1));
+        vector.push(Number(data));
+    }
+
+    console.log(vector);
+
+    data = prompt('Ingrese el numero que se usara de filtro:');
+    let filtro:number = Number(data);
+
+    console.log("El filtro es: "+ filtro);
+
+    let mas_cercano:number=0;
+
+    let menor_cercano:number= -Infinity;
+    let mayor_cercano:number= Infinity;
+
+    //Que significa eso de Infinity y -Infinity?:
+    //Infinity es un valor numérico que representa infinito. Es mayor que cualquier otro número y 
+    //-Infinity es un valor numérico que representa infinito negativo. Es menor que cualquier otro número.
+    //https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Infinity
+
+    for(let i=0;i<n;i++){
+        if(vector[i]==filtro){
+            mas_cercano=vector[i];
+            break
+        }
+        else if(vector[i]<filtro && vector[i]>menor_cercano){
+            menor_cercano=vector[i];
+        }
+        else if (vector[i]>filtro && vector[i]<mayor_cercano){
+            mayor_cercano=vector[i]; 
+        }
+    }
+
+    if(mas_cercano==filtro){
+
+    }
+    else{
+            if(menor_cercano==-Infinity){
+                mas_cercano=mayor_cercano;
+            }
+            else if(mayor_cercano==Infinity){
+                mas_cercano=menor_cercano;
+            }
+            else{
+                let diferencia_menor:number = filtro-menor_cercano;
+                let diferencia_mayor:number = mayor_cercano-filtro;
+
+                console.log("La diferencia menor es: "+ diferencia_menor);
+                console.log("La diferencia mayor es: "+ diferencia_mayor); //Verificar
+            
+                if(diferencia_menor<diferencia_mayor){
+                    mas_cercano=menor_cercano;
+                }
+                else{
+                    mas_cercano=mayor_cercano;
+    
+                }
+            }
+        }
+   
+
+    console.log("El número más cercano es: "+ mas_cercano);
+
+    let cambio:number = vector.indexOf(mas_cercano);//Encontrar la posicion del número más cercano en el vector
+
+    vector[cambio]=filtro;
+
+    console.log("El vector final es: "+ vector);
+}
+
+function ejercicio_17(){
+    /*
+    17.	Construir un programa TS donde se pueda ingresar 10 sueldos en un arreglo unidimensional, luego seleccione los sueldos mayores a 475 y muéstrelo en otro arreglo.
+    */
+
+    let data: string | null = prompt('Por favor, ingrese el tamaño del arreglo:');
+    let n:number = Number(data);
+    const vectorSueldo: number[] = [];
+    for( let i = 0; i < n; i++) {
+        data = prompt('Ingrese el sueldo #'+ (i+1));
+        vectorSueldo.push(Number(data));
+    }
+
+    console.log(vectorSueldo);
+
+    const vectorMayores: number[] = vectorSueldo.filter((sueldo) => sueldo > 475);
+    //Que hace el filter?:
+    //El método filter() crea un nuevo array con todos los elementos que cumplan la condición implementada por la función dada.
+    //https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+
+    console.log("Los sueldos mayores a 475 son: "+ vectorMayores);
+
+}
+
+let opcion: string | null = prompt('Por favor, ingrese el número del ejercicio que desea ejecutar:');
+let opcion_elegida:number = Number(opcion);
+
+if(opcion_elegida<1 || opcion_elegida>17){
+    alert("El número ingresado no es válido");
+}
+else{
+    console.log("Ejecutando el ejercicio: "+ opcion_elegida);
+    console.log(vectorPreguntas[opcion_elegida-1]);
+
+   
+    switch(opcion_elegida){
+        case 1:
+            ejercicio_1();
+            break;
+        case 2:
+            ejercicio_2();
+            break;
+        case 3:
+            ejercicio_3();
+            break;
+        case 4:
+            ejercicio_4();
+            break;
+        case 5:
+            ejercicio_5();
+            break;
+        case 6:
+            ejercicio_6();
+            break;
+        case 7:
+            ejercicio_7();
+            break;
+        case 8:
+            ejercicio_8();
+            break;
+        case 9:
+            ejercicio_9();
+            break;
+        case 10:
+            ejercicio_10();
+            break;
+        case 11:
+            ejercicio_11();
+            break;
+        case 12:
+            ejercicio_12();
+            break;
+        case 13:
+            ejercicio_13();
+            break;
+        case 14:
+            ejercicio_14();
+            break;
+        case 15:
+            ejercicio_15();
+            break;
+        case 16:
+            ejercicio_16();
+            break;
+        case 17:
+            ejercicio_17();
+            break;
+    }
+   
+}
