@@ -9,7 +9,6 @@ My open source homework using TypeScript :) .
 <center>
 
 > ```Url to test the funtions:```  
-<b>
-> [Pagina para probar las Funcionalidades](https://ray-alessandro.github.io/OpenSource-HM_1/)</b>
+<b>[Pagina para probar las Funcionalidades](https://ray-alessandro.github.io/OpenSource-HM_1/)</b>
 
 </center>
